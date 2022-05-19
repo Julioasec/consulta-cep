@@ -1,0 +1,48 @@
+nav {
+  background: linear-gradient(45deg, #02AFE7 50%, #BA7A16 50%);
+}
+
+nav .nav-item > button {
+  font-size: large;
+}
+main div.container {
+  margin-top: 10vh;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px -2px 16px 2px #01325A;
+  background-color: #00416B;
+}
+main div.container .label-cep {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header nav a, nav .nav-item > button {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header nav a:hover, nav .nav-item > button:hover {
+  color: black;
+  transition: color 0.4s;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+div.input-cep input:hover {
+  cursor: text;
+}
+
+footer .container {
+  margin-top: 11vh;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */

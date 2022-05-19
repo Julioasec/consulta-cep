@@ -1,0 +1,23 @@
+nav{
+    background: linear-gradient(45deg, $azul3 50%, $laranja 50%);
+}
+
+header nav a{
+   @extend %uppercase;
+   
+   &:hover{
+       @extend %hover-custom;
+   }
+}
+
+
+nav .nav-item > button{
+    @extend %uppercase;
+    font-size: large;
+
+    &:hover{
+        @extend %hover-custom;
+    }
+}
+
+    

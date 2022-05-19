@@ -8,11 +8,129 @@
     <meta name="author" content="Julio Asec">
     <meta name="application-name" content="Consulta Cep">
     <meta name="keywords" content="HTML, CSS, JavaScript, Gulp, Axios">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     
+
     <title>Consulta Cep</title>
 </head>
 <body>
-    
+    <header> 
+        <nav class="navbar d-flex justify-content-evenly align-items-center">
+            <a href="#" class="navbar-brand">Consulta Cep</a>
+            <ul class="navbar-nav ms-5">
+                <li class="nav-item"><button href="" class="bg-transparent shadow-none border-0 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     Como usar 
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Consulta Cep - Como Usar</h5>
+            </div>
+            <div class="modal-body">
+                <p>Insira um Cep válido e aguarde. As caixas irão mostrar seus respectivos conteúdos.</p>
+                <p>Você pode copiar cada fragmento do endereço ao clicar sobre sua caixa ou pode copiar o endereço completo, no botão <span class="text-uppercase">"copiar"<span></span>.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendi!<span class="visually-hidden">/Fechar</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <main>
+        <div class="container border">
+            <form>
+                <div class="row justify-content-center g-2 mb-4">
+                    <label class="label-cep" for="">Informe um Cep</label>
+                    <div class="col-auto align-items-center justify-content-center input-cep">
+                        <input type="text" class="form-control text-center">
+                    </div>
+                </div>
+
+                <div class="row g-5 mb-5">
+                    <div class="col-12 col-md-6">
+                        <label for="" class="label-cep">Logradouro</label>
+                        <input type="text" class="form-control" readonly>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="" class="label-cep">Complemento</label>
+                        <input type="text" class="form-control" readonly>
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <label for="" class="label-cep">Bairro</label>
+                        <input type="text" class="form-control" readonly>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <label for="" class="label-cep">Cidade/UF</label>
+                        <input type="text" class="form-control" readonly>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row mb-2">
+                <div>
+                    <label for="" class="label-cep">Endereço Completo</label>
+                </div>
+                <div class="col-12 input-group">
+                    <input type="text" class="form-control" readonly>
+                    <button class="btn btn-dark text-uppercase" type="button">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </main>   
+
+
+    <footer>
+        <div class="container">
+            <div class="row contatos">
+                <div class="col-12 col-sm-6">
+                    <p class="text-white text-center p-4">Desenvolvido por Julio Asec</p>
+                </div>
+                <div class="col-12 col-sm-6 text-center p-4">
+                    <a href="https://github.com/Julioasec" target="_blank" class="text-decoration-none text-light">
+                        <i class="fa-brands fa-github fa-2xl">
+                            <span class="visually-hidden">
+                                Github:https://github.com/Julioasec
+                            </span>
+                        </i>
+                    </a>
+                  
+                  
+                    <a href="mailto:ed_julio@outlook.com" target="_blank" class="text-decoration-none text-light" data-bs-toggle="tooltip" title="ed_julio@outlook.com">
+                        <i class="fa-solid fa-envelope fa-2xl">
+                            <span class="visually-hidden">
+                                Email:ed_julio@utlook.com
+                            </span>
+                        </i>
+                    </a>
+                    
+                   
+                    <a href="https://www.linkedin.com/in/julio-silva-04b6aa224/" target="_blank" class="text-decoration-none text-light">
+                        <i class="fa-brands fa-linkedin fa-2xl">
+                            <span class="visually-hidden">
+                                LinkedIn:https://www.linkedin.com/in/julio-silva-04b6aa224/
+                            </span>
+                        </i>
+                    </a>
+                </div>
+           
+            <div class="col-12">
+                <p class="text-white text-center">Todos os Direitos Reservados&copy;2022</p>
+            </div>
+        </div>
+        </div>
+        </footer>
+
+    <script src="https://kit.fontawesome.com/b530da3cfa.js" crossorigin="anonymous"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp dev",
-    "prod": "gulp prod"
+    "dev": "gulp buildDev",
+    "prod": "gulp buildProd"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +17,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-watch": "^5.0.1",
     "sass": "^1.51.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }

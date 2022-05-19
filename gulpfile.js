@@ -9,45 +9,50 @@ let isProd;
 //builda o sass em css
 function sassBuild() {
 
+    let srcUrl = isProd ? './src/css/style.css' : './src/scss/**/*.scss';
+    let destUrl = isProd ? './dist/css': './src/css';
+
     if(isProd){
-        return gulp.src('./src/css/style.css')
+        return gulp.src(srcUrl)
         .pipe(cssNano({
                 autoprefixer: {
                     browsers:['>1%','last 2  versions'],
                     add:true
                 }
         }))
-        .pipe(gulp.dest('./dest/css'))
+        .pipe(gulp.dest(destUrl))
     }
     
-    return gulp.src('./src/scss/**/*.scss')
+    return gulp.src(srcUrl)
     .pipe(sourceMaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass()
+    .on('error', sass.logError))
     .pipe(sourceMaps.write('.'))
-    .pipe(gulp.dest('./src/css'))
+    .pipe(gulp.dest(destUrl))
    
 }
 
-
 //modo watch
+
 function watchFiles() {
-    return watch('./src/scss/**/*.scss', gulp.series(dev, sassBuild))
+    return watch('./src/scss/**/*.scss', exports.buildprod)
 }
+
 
 
 function dev(cb) {
     isProd = false;
-    cb()
+    cb();
 }
 
 function prod(cb) {
     isProd = true;
-    cb()
+    cb();
 }
 
 
 
 
 exports.watch = watchFiles;
-exports.dev = gulp.series(dev, gulp.parallel(sassBuild))
-exports.prod = gulp.series(prod, gulp.parallel(sassBuild))
+exports.buildDev = gulp.series(dev, gulp.parallel(sassBuild))
+exports.buildProd = gulp.series(prod, gulp.parallel(sassBuild))
