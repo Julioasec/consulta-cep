@@ -41,8 +41,13 @@ function prod(cb) {
     cb()   
 }
 
+function watch() {
+    gulp.watch('./src/scss/**/*.scss', sassBuild)
+    
+}
 
 
 exports.default = sassBuild;
+exports.watch = watch;
 exports.buildDev = gulp.series(dev, gulp.parallel(sassBuild))
 exports.buildProd = gulp.series(prod, gulp.parallel(sassBuild))
