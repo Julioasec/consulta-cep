@@ -52,7 +52,7 @@
                 <div class="row justify-content-center g-2 mb-4">
                     <label class="label-cep" for="">Informe um Cep</label>
                     <div class="col-auto align-items-center justify-content-center">
-                        <input type="text" class="form-control text-center" id="input-cep">
+                        <input type="text" class="form-control text-center" id="input-cep" autocomplete="off" maxlength="9">
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-12 input-group">
                     <input type="text" class="form-control" readonly id="endereco-completo">
-                    <button class="btn btn-dark text-uppercase" type="button">Copiar</button>
+                    <button class="btn btn-dark text-uppercase" type="button" id="botao">Copiar</button>
                 </div>
             </div>
         </div>
@@ -133,6 +133,6 @@
     <script src="https://kit.fontawesome.com/b530da3cfa.js" crossorigin="anonymous"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/app.js" type="module"></script>
+    <script src="./js/all.js" type="module"></script>
 </body>
 </html>

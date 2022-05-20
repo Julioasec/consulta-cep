@@ -45,8 +45,8 @@ function jsBuild() {
         .pipe(gulp.dest(urlDest))
     }
 
-    return gulp.src(['./src/js/elementos.js', './src/js/requisicao.js'])
-    .pipe(concat('app.js'))
+    return gulp.src('./src/js/app.js')
+    // .pipe(concat('app.js'))
     .pipe(babel({
         presets:['@babel/env']
     }))
