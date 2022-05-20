@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de consulta de CEP">
+    <meta name="description" content="Consulte seu endereço informando seu cep">
     <meta name="author" content="Julio Asec">
     <meta name="application-name" content="Consulta Cep">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Gulp, Axios">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Gulp, Axios, consumo de api">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     
@@ -51,27 +51,27 @@
             <form>
                 <div class="row justify-content-center g-2 mb-4">
                     <label class="label-cep" for="">Informe um Cep</label>
-                    <div class="col-auto align-items-center justify-content-center input-cep">
-                        <input type="text" class="form-control text-center">
+                    <div class="col-auto align-items-center justify-content-center">
+                        <input type="text" class="form-control text-center" id="input-cep">
                     </div>
                 </div>
 
                 <div class="row g-5 mb-5">
                     <div class="col-12 col-md-6">
                         <label for="" class="label-cep">Logradouro</label>
-                        <input type="text" class="form-control" readonly>
+                        <input type="text" class="form-control" readonly id="logradouro">
                     </div>
                     <div class="col-12 col-md-6">
                         <label for="" class="label-cep">Complemento</label>
-                        <input type="text" class="form-control" readonly>
+                        <input type="text" class="form-control" readonly id="complemento">
                     </div>
                     <div class="col-12 col-sm-8">
                         <label for="" class="label-cep">Bairro</label>
-                        <input type="text" class="form-control" readonly>
+                        <input type="text" class="form-control" readonly id="bairro">
                     </div>
                     <div class="col-12 col-md-3">
                         <label for="" class="label-cep">Cidade/UF</label>
-                        <input type="text" class="form-control" readonly>
+                        <input type="text" class="form-control" readonly id="uf">
                     </div>
                 </div>
             </form>
@@ -81,7 +81,7 @@
                     <label for="" class="label-cep">Endereço Completo</label>
                 </div>
                 <div class="col-12 input-group">
-                    <input type="text" class="form-control" readonly>
+                    <input type="text" class="form-control" readonly id="endereco-completo">
                     <button class="btn btn-dark text-uppercase" type="button">Copiar</button>
                 </div>
             </div>
@@ -132,5 +132,7 @@
 
     <script src="https://kit.fontawesome.com/b530da3cfa.js" crossorigin="anonymous"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>
