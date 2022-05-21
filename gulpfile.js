@@ -66,9 +66,13 @@ function prod(cb) {
     cb()   
 }
 
+function html() {
+   return gulp.src('./src/*.html')
+    .pipe(gulp.dest('./dist/'))
+}
 
 exports.default = gulp.parallel(sassBuild, jsBuild);
 exports.js = jsBuild;
 exports.watch = watch;
 exports.buildDev = gulp.series(dev, gulp.parallel(sassBuild, jsBuild))
-exports.buildProd = gulp.series(prod, gulp.parallel(sassBuild, jsBuild))
+exports.buildProd = gulp.series(prod, gulp.parallel(sassBuild, jsBuild, html))
