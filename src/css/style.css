@@ -33,12 +33,12 @@ input:hover {
   cursor: pointer;
 }
 
-div.input-cep input:hover {
+input#input-cep:hover {
   cursor: text;
 }
 
 footer .container {
-  margin-top: 11vh;
+  margin-top: 1vh;
 }
 
 body {

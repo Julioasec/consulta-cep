@@ -32,7 +32,7 @@ class Cep{
   }else if(cep.length == 0){
         this.cepError('')
   }else{
-    this.cepError('Informe 8 Dígitos.')
+    this.cepError('Informe 8 números')
   }
 
      }
@@ -101,16 +101,6 @@ class Cep{
     this.vigiaListener()
   }
 
-  //faz a validação do cep
-  validaCep(cep){
-    let novoCep;
-    novoCep = cep.replace(/\s|\W/g,'')
-    
-    if(novoCep.length !== 8){
-      this.cepError('O Cep deve conter 8 números')
-      return{status:false}
-    }
-  }
 }
 
 export default Cep;

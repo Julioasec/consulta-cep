@@ -35,22 +35,19 @@ function sassBuild() {
 }
 
 function jsBuild() {
-
-    let urlSrc = isProd ? './src/js/app.js' :'./src/js/**/*.js';
-    let urlDest = isProd ?'./dist/js' :'./src/js';
-
-    if (isProd) {
-        return gulp.src()
+    
+    // if (isProd) {
+        return gulp.src('./src/js/**/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest(urlDest))
-    }
+        .pipe(gulp.dest('./dist/js'))
+    // }
 
-    return gulp.src('./src/js/app.js')
-    // .pipe(concat('app.js'))
-    .pipe(babel({
-        presets:['@babel/env']
-    }))
-    .pipe(gulp.dest(urlDest))
+    // return gulp.src('./src/js/**/*.js')
+    // .pipe(concat('all.js'))
+    // .pipe(babel({
+    //     presets:['@babel/env']
+    // }))
+    // .pipe(gulp.dest(urlDest))
 }
 
 function watch() {
