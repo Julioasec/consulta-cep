@@ -1,9 +1,9 @@
-# Consulta Cep
+# ⭐ Consulta Cep
 
 Faça consultas de endereço através de um CEP.  
 
-![imagem exemplo]()
-# Instruções de Uso
+![imagem exemplo](./readme-img/gif-principal.gif)
+# 📖 Instruções de Uso
 
 ### Pré Requisitos:
 
@@ -11,8 +11,6 @@ Faça consultas de endereço através de um CEP.
 - [NodeJs](https://nodejs.org/en/)
 - Um navegador. 
 - [VSCode](https://code.visualstudio.com/)(Com a extensão [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)).
-
-  
   
 <br/>
 
@@ -32,7 +30,7 @@ Usando um terminal de sua preferência siga as instruções a seguir:
     
 <br/>
 
-# Funcionalidades 
+# ⚡ Funcionalidades 
 
 - Consultar um endereço via número do cep.
 - Copiar o endereço.
@@ -41,21 +39,20 @@ Usando um terminal de sua preferência siga as instruções a seguir:
 
 ## Demonstração:
 
-Digite um cep válido e clique fora da caixa. A aplicação irá completar seus respectivos campos.
+Digite um cep válido e clique fora da caixa. A aplicação irá completar seus respectivos campos:
 
+![Uma Gif Sobre o Projeto](readme-img/gif-principal.gif)  
 
-![Uma Gif Sobre o Projeto]()  
+Caso um cep inexistente ou fora do padrão seja informado, a aplicação informará:
 
-Caso um cep inexistente ou fora do padrão seja informado, a aplicação informará.  
+![Uma Gif Sobre o Projeto](readme-img/gif2.gif)  
 
-![Uma Gif Sobre o Projeto]()  
+Voce também pode copiar o conteúdo das caixas clicando sobre elas:
 
-Voce também pode copiar o conteúdo das caixas clicando sobre elas.
-
-![Uma Gif Sobre o Projeto]()  
+![Uma Gif Sobre o Projeto](readme-img/gif3.gif)  
 <br/>
 
-# Sobre
+# 🚩 Sobre
     
 ## Técnologias Utilizadas:
 
@@ -66,30 +63,17 @@ Voce também pode copiar o conteúdo das caixas clicando sobre elas.
 - [Axios](https://axios-http.com/ptbr/)
 - [Gulp](https://gulpjs.com/) 
 - [Git](https://git-scm.com/) 
-- [NodeJs](https://nodejs.org/en/) (NPM) 
+- [NodeJs](https://nodejs.org/en/) (npm) 
 
 ## Editor de Código:
 - [Vscode](https://code.visualstudio.com/)
   
+# 🔎 Observações:
  
-## Observações:
- 
- - O Navegador bloqueia a requisição pra Api, por isso é necessário a extensão Live Server.
+ - O Navegador bloqueia a requisição pra Api, pra impedir isso é necessário simular um servidor, a extensão Live Server supre isso.  
  - O módulo do cliente Axios utiliza o padrão CommonJs, que não é nativo do navegador. As soluções encontradas foram: usar um module bundler ou importar o cliente via tag script direto no arquivo html, a segunda opção foi a implementada.
+ - Os plugins do babel e de concatenação geravam um erro. A variável "cep" é utilizada com frequência e por isso a transpilação pra ES5 gerava um erro causado pelo hoisting(já que o ES5 ainda não aceitava a declaração "let"). De acordo com o site caniuse o ES6 é suportado pela maioria dos navegadores, por isso foi decidido a não transpilação pra ES5.
   
-
-
-
 ****
-Criado por ***JULIO ASEC***  
- [Linkedin](https://www.linkedin.com/in/julio-silva-04b6aa224/) | [Github]() | [ed_julio@outlook.com](mailto:ed_julio@outlook.com)
-
-  
-
-
-
-
-
-
-
-
+Criado por ***JULIO ASEC*** 👨🏾‍🦲
+[Linkedin](https://www.linkedin.com/in/julio-silva-04b6aa224/) | [Github](https://github.com/Julioasec) | [ed_julio@outlook.com](mailto:ed_julio@outlook.com)
