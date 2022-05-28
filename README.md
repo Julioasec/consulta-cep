@@ -26,6 +26,9 @@ Usando um terminal de sua preferência siga as instruções a seguir:
     # Instale as dependências do projeto:
     npm install 
 
+    # Gere o build na pasta Dist
+    npm run prod
+
     # Execute o Live Server na pasta dist  
     
 <br/>
@@ -73,6 +76,7 @@ Voce também pode copiar o conteúdo das caixas clicando sobre elas:
  - O Navegador bloqueia a requisição pra Api, pra impedir isso é necessário simular um servidor, a extensão Live Server supre isso.  
  - O módulo do cliente Axios utiliza o padrão CommonJs, que não é nativo do navegador. As soluções encontradas foram: usar um module bundler ou importar o cliente via tag script direto no arquivo html, a segunda opção foi a implementada.
  - Os plugins do babel e de concatenação geravam um erro. A variável "cep" é utilizada com frequência e por isso a transpilação pra ES5 gerava um erro causado pelo hoisting(já que o ES5 ainda não aceitava a declaração "let"). De acordo com o site caniuse o ES6 é suportado pela maioria dos navegadores, por isso foi decidido a não transpilação pra ES5.
+ - Foi utilizado no projeto o paradigma orientado a objetos.
   
 ****
 Criado por ***JULIO ASEC*** 👨🏾‍🦲
