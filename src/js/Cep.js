@@ -12,7 +12,7 @@ class Cep{
     //faz a requisição pra API
     async consultaCep(){
       let cep = this.cep.value;
-      cep = cep.replace(/\s|\W/g,'')
+      cep = cep.replace(/\D/g,'')
 
      if(cep.length == 8){
       try{
