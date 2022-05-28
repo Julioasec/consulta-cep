@@ -2,9 +2,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const sourceMaps = require('gulp-sourcemaps');
 const cssnano = require('gulp-cssnano');
-const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const babel = require('gulp-babel')
+
 
 
 let isProd = false;
@@ -36,18 +35,9 @@ function sassBuild() {
 
 function jsBuild() {
     
-    // if (isProd) {
         return gulp.src('./src/js/**/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
-    // }
-
-    // return gulp.src('./src/js/**/*.js')
-    // .pipe(concat('all.js'))
-    // .pipe(babel({
-    //     presets:['@babel/env']
-    // }))
-    // .pipe(gulp.dest(urlDest))
 }
 
 function watch() {
