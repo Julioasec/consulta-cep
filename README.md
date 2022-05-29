@@ -77,6 +77,7 @@ Voce também pode copiar o conteúdo das caixas clicando sobre elas:
  - O módulo do cliente Axios utiliza o padrão CommonJs, que não é nativo do navegador. As soluções encontradas foram: usar um module bundler ou importar o cliente via tag script direto no arquivo html, a segunda opção foi a implementada.
  - Os plugins do babel e de concatenação geravam um erro. A variável "cep" é utilizada com frequência e por isso a transpilação pra ES5 gerava um erro causado pelo hoisting(já que o ES5 ainda não aceitava a declaração "let"). De acordo com o site caniuse o ES6 é suportado pela maioria dos navegadores, por isso foi decidido a não transpilação pra ES5.
  - Foi utilizado no projeto o paradigma orientado a objetos.
+ - Para visualizar o projeto em funcionamento, [Clique Aqui!](https://codepen.io/julioasec/full/jOZZwQy)
   
 ****
 Criado por ***JULIO ASEC*** 👨🏾‍🦲
